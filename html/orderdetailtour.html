@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTour - Cùng bạn đến mọi miền đất nước</title>
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/600ee70b68.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="stylesheet" href="../css/tour.css" />
+    <link rel="stylesheet" href="../css/test.css" />
+    <link rel="stylesheet" href="../css/orderdetail.css" />
+  </head>
+
+  <body style="background: #fff">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-scrolled">
+      <div class="container">
+        <a href="../html/homepage.html" class="navbar-brand ps-3">
+          <img
+            src="../img/homepage-img/3-3.png"
+            class="img-fluid"
+            id="logo"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler ms-auto me-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#user"
+          id="user-toggler"
+        >
+          <span><i class="fa-solid fa-user"></i></span>
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+          id="navbar-toggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="../html/homepage.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="../html/tour.html" class="nav-link">Tours</a>
+            </li>
+            <li class="nav-item">
+              <a href="../html/aboutus.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="../html/sitemap.html" class="nav-link">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="user">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item d-block">
+              <a href="../html/login.html" id="login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item d-block">
+              <a href="../html/signup.html" id="signUp" class="nav-link"
+                >Sign Up</a
+              >
+            </li>
+            <li class="nav-item d-none accountAvartar">
+              <a
+                href="../html/thongtincanhan.html"
+                class="nav-link d-flex"
+                style="gap: 10px; font-weight: 900"
+                ><span><i class="fa-regular fa-circle-user"></i></span
+                >Account</a
+              >
+            </li>
+            <li class="nav-item d-none logOutBtn">
+              <button class="btn logout">Log out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-4" style="margin-bottom: 100px !important">
+      <div class="row">
+        <div class="col-12">
+          <div
+            class="img-warper"
+            style="
+              background: url(../img/tours/bg.png) center no-repeat;
+              background-size: cover;
+            "
+          >
+            <div class="filter-container w-75">
+              <div class="container d-flex flex-column" style="gap: 10px">
+                <h4 class="text-center responsive-text-title title">
+                  Chi tiết đặt tour
+                </h4>
+                <select name="" class="form-select" id="select"></select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3" id="empty">
+        <div class="alert alert-warning alert-dismissible">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+          ></button>
+          <strong>Bạn chưa có đơn đặt tour!</strong> Hãy
+          <a class="alert-link" href="../html/tour.html">đặt tour</a> ngay!
+        </div>
+        <div
+          class="d-flex justify-content-center"
+          style="background-color: #f1f1e6"
+        >
+          <img
+            src="../img/thongtincanhan/empty.png"
+            class="img-fluid w-75"
+            style="pointer-events: none"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="row mt-5" id="tours">
+        <div class="col-lg-4 mt-3 col-sm-12">
+          <div class="order-box" style="margin-top: 0">
+            <div class="order-header text-center">
+              <h4>Thông tin cá nhân</h4>
+            </div>
+            <div class="order-main">
+              <div class="row border-0 border-top">
+                <div
+                  class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+                >
+                  Họ và tên:
+                </div>
+                <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control"
+                    disabled
+                    id="hoten"
+                    data-change="name"
+                  />
+                </div>
+              </div>
+              <div class="row border-0 border-top">
+                <div
+                  class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+                >
+                  Số điện thoại:
+                </div>
+                <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control"
+                    disabled
+                    id="sdt"
+                    data-change="sdt"
+                  />
+                </div>
+              </div>
+              <div class="row border-0 border-top">
+                <div
+                  class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+                >
+                  Email:
+                </div>
+                <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control"
+                    disabled
+                    id="mail"
+                    data-change="email"
+                  />
+                </div>
+              </div>
+              <div class="row border-0 border-top">
+                <div
+                  class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+                >
+                  Địa chỉ:
+                </div>
+                <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+                  <input
+                    type="text"
+                    value=""
+                    class="form-control"
+                    disabled
+                    id="dc"
+                    data-change="dc"
+                  />
+                </div>
+              </div>
+              <div class="row border">
+                <div
+                  class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+                >
+                  Ghi chú:
+                </div>
+                <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+                  <textarea
+                    name="note"
+                    id="note"
+                    class="form-control"
+                    class="form-control"
+                    disabled
+                    data-change="dc"
+                    style="height: 50px"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 mt-3 col-sm-12 order-box">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <h3 class="fw-bold pt-3 mb-4">THÔNG TIN ĐẶT TOUR</h3>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Tên tour:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                id="tenTour"
+                class="form-control"
+                disabled
+                data-change="tentour"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Số ngày đi tour:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                id="tg"
+                class="form-control"
+                disabled
+                data-change="songayditour"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Phương tiện:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="pt"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Khách sạn:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="ks"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Người lớn:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="nguoilon"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Trẻ em:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="treEm"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Trẻ nhỏ:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="treNho"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Giá người lớn:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="giaNguoiLon"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Giá trẻ em:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="giaTreEm"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Ngày đặt tour:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="ngaykh"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Tổng tiền:
+            </div>
+            <div class="col-md-9 col-12 py-md-4 py-sm-2 py-xs-0">
+              <input
+                type="text"
+                value=""
+                class="form-control"
+                disabled
+                id="tongtien"
+              />
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div class="col-12 py-md-4 py-sm-2 py-xs-2">
+              <button class="btn btn-danger fw-bold float-end" id="huy">
+                Hủy đặt tour
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal trigger button -->
+      <button
+        type="button"
+        class="btn btn-primary btn-lg d-none"
+        data-bs-toggle="modal"
+        id="btn"
+        data-bs-target="#modalId"
+      >
+        Launch
+      </button>
+
+      <!-- Modal Body -->
+      <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+      <div
+        class="modal fade"
+        id="modalId"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-body text-center fw-bold">
+              <i
+                class="fa-regular fa-face-sad-tear fa-3x"
+                style="color: #dd5746"
+              ></i>
+              <h5 class="mt-2">
+                Bạn có chắc chắn muốn hủy đặt tour này không?
+              </h5>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-outline-dark"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" id="huyBtn" class="btn btn-danger fw-bold">
+                Hủy đặt tour
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer style="background-color: #fff">
+      <div class="container">
+        <div class="row">
+          <div class="col mt-5">
+            <img
+              src="../img/homepage-img/3-1.png"
+              class="img-fluid footer-img"
+              alt=""
+            />
+            <h5 class="text-uppercase footer-title">
+              Công ty tnhh du lịch itour
+            </h5>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">thông tin liên hệ</h5>
+            <ul class="p-0 mt-4">
+              <li class="footer-text">
+                <b>Địa chỉ: </b> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Ho
+                Chi Minh City
+              </li>
+              <li class="footer-text"><b>Hotline: </b> 0899488041</li>
+              <li class="footer-text"><b>Email: </b> itour@gmail.com</li>
+              <li class="footer-text"><b>Website: </b> itour.iuh.vn</li>
+            </ul>
+            <div class="d-flex icon-list">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-solid fa-envelope"></i>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">Kênh thanh toán</h5>
+            <img
+              src="../img/homepage-img/payment.png"
+              alt=""
+              class="footer-img"
+              style="pointer-events: none"
+            />
+            <h5 class="text-uppercase footer-title mt-3">điều khoản sử dụng</h5>
+            <ul class="p-0">
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách cookie</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Điều khoản sử dụng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/autoLogin.js"></script>
+    <script type="module" src="../js/orderdetail.js"></script>
+    <script>
+      let userToggler = document.getElementById("user-toggler");
+      let navbarToggler = document.getElementById("navbar-toggler");
+      let collapsibleNavbar = document.getElementById("collapsibleNavbar");
+      let user = document.getElementById("user");
+
+      userToggler.addEventListener("click", function () {
+        if (collapsibleNavbar.classList.contains("show")) {
+          navbarToggler.click();
+        }
+      });
+
+      navbarToggler.addEventListener("click", function () {
+        if (user.classList.contains("show")) {
+          userToggler.click();
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 992px)
+{
+    #tg {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .row{
+        padding: 15px 0;
+    }
+}
+@media screen and (max-width: 360px) {
+    .row{
+        padding: 15px 0;
+    }
+}

@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tit__booking {
+    background: linear-gradient(90deg, #05374b, #0a5c74);
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 0px 0px
+}
+
+.tit__booking h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: var(--font-r2);
+}
+
+.one-one__booking .tit__booking {
+    padding: 7px 10px;
+}
+
+.one__booking {
+    background: #fff;
+    border: 1px solid #05374b;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 0.1)
+}
+
+.content__booking {
+    padding: 10px;
+
+}
+
+.custom-input {
+    height: 42px;
+    line-height: 42px;
+    color: #333!important;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 13px!important;
+}
+
+.botton-booking input {
+    text-transform: uppercase;
+    font-size: 15px;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0px;
+    background: #05374b;
+    border: none;
+    font-family: var(--font-r2);
+    border-radius: 999px
+}
+
+.botton-booking input:hover {
+    background: white;
+    color: #05374b;
+}
+
+.form-row{
+    display: flex;
+}
+
+.form-row .custom-lbl {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #333
+}
+
+.custom-select {
+    line-height: 33px;
+    color: #333!important;
+    cursor: pointer;
+}
+
+.custom-select option {
+    font-size: 15px;
+    color: #333!important;
+}
+
+.custom-select.text-bule {
+    color: #05374b!important;
+    font-size: 18px!important;
+}
+
+.custom-select.text-bule option {
+    font-size: 18px;
+    color: #05374b!important;
+}
+
+.form-check-custom {
+    padding-left: 0px!important;
+}
+
+.form-check .custom-select {
+    width: 80px
+}
+
+input[readonly],select[readonly] {
+    pointer-events: none;
+    background: #eee!important
+}
+
+input.tourmaster-datepicker[readonly] {
+    pointer-events: inherit;
+    background: #fff!important
+}
+
+.custom-pirce,input.custom-pirce[readonly] {
+    font-weight: 700;
+    font-size: 17px!important;
+    background: #fff!important;
+    letter-spacing: 1.3px;
+    color: var(--color-r)!important;
+}
+
+.block-invalid .invalid-feedback {
+    position: absolute;
+    top: 11px;
+    left: 101%
+}
+
+.block-invalid.active-invalid .invalid-feedback {
+    display: block;
+}
+
+.block-invalid.active-invalid .form-control {
+    border-color: #dc3545!important
+}
+
+.text-info.custom-text {
+    color: #fb752e!important
+}
+
+#hotel-tour i {
+    font-size: 20px;
+    color: #05374b;
+}
+
+.one__booking__right {
+    border-color: #05374b;
+}
+
+.one__booking__right .tit__booking {
+    background: #05374b;
+}
+

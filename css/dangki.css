@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(../img/dangki/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.row{
+    width: 70%;
+    /* height: 550px; */
+    background-color:#ffffff;
+    border-radius: 40px;
+    
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.5);
+    margin: 70px 0;
+}
+
+.body1{
+    height: 100%;
+    border-radius: 0 20% 20% 0;
+    background: linear-gradient(90deg, #05374b, #0a5c74);
+    flex: 1;
+}
+
+.body2{
+    height: 100%;
+    border-radius: 40px;
+    padding-bottom: 50px;
+    /* border-top-right-radius: 60px; */
+}
+.body3{
+    height: 100%;
+    border-radius: 40px;
+    border-radius: 20% 0 0 20%;
+    background: linear-gradient(-90deg, #05374b, #0a5c74);
+}
+
+
+.title{
+    font-size: large;
+    font-family: cursive;
+    font-weight: bolder;
+    margin-top: 100px;
+}
+.icon{
+    border: 2px solid #807d7d;
+    color: #807d7d;
+    border-radius: 10px;
+    width: 50px;    
+    height: 50px;
+    display: block;
+    padding: 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+.icon:hover{
+    border-color: #1f4c6b;
+    color: #1f4c6b;
+}
+.fa{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.title2{
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+input[type="text"]{
+    height: 50px;
+    /* background-color: rgba(128, 128, 128, 0.1); */
+    /* border-radius: 15px; */
+}
+input[type="text"]:focus{
+    border-color: #1f4c6b;
+    box-shadow: none;
+}
+.form-control.is-invalid:focus{
+    box-shadow: none;
+}
+#pass,#passconfirm {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+#pass-hide, #passconfirm-hide{
+   background-color: #eee;
+   display: flex;
+   align-items: center;
+   padding: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.btn{
+    border-radius: 15px;
+    padding: 0 20px;
+    background-color: #1f4c6b; color: white;
+    border: none;
+}
+.btn[style*='--style: dangki']{
+    background-color: transparent;
+    color: #002e4a;
+    font-size: 13px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    border: none;
+}
+.btn[style*='--style: dangki']:hover{
+    /* scale: 1.1; */
+    background-color: #fff;
+    color: #807d7d;
+    
+}
+.btn:hover{
+    background-color: #002e4a;
+    color: #fff;
+    
+}
+.form-control:focus{
+    outline: none;
+    border-color: #1f4c6b;
+    box-shadow: none;
+}
+.form-floating label{
+    width: 100%;
+}
+@media screen and (max-width: 1200px){
+    .btn{
+        font-size: 17px;
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 992px){
+    .row{
+        width: 90%;
+    }
+    
+    .title{
+        margin-top: 100px;
+    }
+    .title2{
+        margin-top: 15px;
+        font-size: 20px;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
+    .fa{
+        font-size: 20px;
+    }
+    
+    .btn{
+        
+        padding: 10px 20px;
+   }
+   .body2{
+    min-height: fit-content;
+   }
+   .form-dk{
+        border-radius: 20px;
+         margin-top: 100px !important;
+   }
+   .btn{
+    font-size: 13px;
+   }
+}
+@media screen and (max-width: 768px){
+    .body1{
+        height: 150px;
+        width: 100%;
+        
+        border-radius: 0px 0px 30px 30px;
+        background: linear-gradient(-180deg, #05374b, #0a5c74);
+    }
+    .title{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 576px) {
+    
+    .body1{
+        height: 120px;
+    }
+    .title{
+        font-size: 17px;
+    }
+    .row{
+        min-height: fit-content;
+    }
+   
+    
+}
+@media screen and (max-width: 400px) {
+    .body1{
+        height: 100px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    
+    .form-floating>.form-control:-webkit-autofill~label{
+        width: 100%;
+    }
+    .btn{
+        font-size: 10px;
+        padding:  7px 15px;
+        border-radius: 5px;
+    }
+    .btn[style*='--style: dangki']{
+       
+        font-size: 7px;
+        width: 50px;
+        
+    }
+    
+    
+}

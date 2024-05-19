@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTour - Cùng bạn đến mọi miền đất nước</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  
+    <script
+      src="https://kit.fontawesome.com/600ee70b68.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../css/homepage.css" />
+
+    <link rel="stylesheet" href="../css/tour.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top navbar-scrolled"
+      >
+        <div class="container">
+          <a href="../html/homepage.html" class="navbar-brand ps-3">
+            <img
+              src="../img/homepage-img/3-3.png"
+              class="img-fluid"
+              id="logo"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler ms-auto me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#user"
+            id="user-toggler"
+          >
+            <span><i class="fa-solid fa-user"></i></span>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+            id="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="../html/homepage.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/tour.html" class="nav-link nav-active"
+                  >Tours</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../html/aboutus.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/sitemap.html" class="nav-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="user">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item d-block">
+                <a href="../html/login.html" id="login" class="nav-link"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item d-block">
+                <a href="../html/signup.html" id="signUp" class="nav-link"
+                  >Sign Up</a
+                >
+              </li>
+              <li class="nav-item d-none accountAvartar">
+                <a
+                  href="../html/thongtincanhan.html"
+                  class="nav-link d-flex"
+                  style="gap: 10px; font-weight: 900"
+                  ><span><i class="fa-regular fa-circle-user"></i></span
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item d-none logOutBtn">
+                <button class="btn logout">Log out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container" style="margin-top: 57px; margin-bottom: 50px">
+      <div class="row">
+        <div class="col-12">
+          <div class="img-warper">
+            <div class="filter-container d-block d-md-none">
+              <div class="container d-flex flex-column" style="gap: 10px">
+                <div class="input-group">
+                  <span
+                    class="input-group-text"
+                    style="background-color: #fff; border-right: none"
+                    ><i class="fas fa-search"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm input-search"
+                    placeholder="Tìm kiếm..."
+                    id="input-search-sm"
+                    style="border-left: none"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="filter-box btn-sm"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#demo"
+                >
+                  <span><i class="fa-solid fa-list-ul"></i></span>
+                  <span class="filter-title">Tất cả các mục</span>
+                </button>
+              </div>
+            </div>
+            <div class="filter-lg-container d-none d-md-block">
+              <div class="header"></div>
+              <div class="filters">
+                <div class="input-group">
+                  <span
+                    class="input-group-text"
+                    style="background-color: #fff; border-right: none"
+                    id="search-icon"
+                    ><i class="fas fa-search"></i
+                  ></span>
+                  <input
+                    type="text"
+                    class="form-control input-search"
+                    placeholder="Tìm kiếm..."
+                    id="input-search"
+                    style="border-left: none"
+                  />
+                </div>
+                <div class="dropdown-filter">
+                  <div class="dropdown-select d-flex justify-content-between">
+                    <div class="dropdown-icon d-flex">
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      <span data-dropdown="gia">Chọn theo giá</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div class="dropdown-filters">
+                    <div class="filter-wrap">
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="gia"
+                        data-value="Dưới 1 triệu"
+                      >
+                        Dưới 1 triệu
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="gia"
+                        data-value="Từ 1 - 2 triệu"
+                      >
+                        Từ 1 - 2 triệu
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="gia"
+                        data-value="Từ 2 - 4 triệu"
+                      >
+                        Từ 2 - 4 triệu
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="gia"
+                        data-value="Từ 4 - 7 triệu"
+                      >
+                        Từ 4 - 7 triệu
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="gia"
+                        data-value="Từ 7 triệu"
+                      >
+                        Từ 7 triệu
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-filter">
+                  <div class="dropdown-select d-flex justify-content-between">
+                    <div class="dropdown-icon d-flex">
+                      <i class="fa-solid fa-plane-departure"></i>
+                      <span data-dropdown="mien">Miền</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div class="dropdown-filters">
+                    <div class="filter-wrap">
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="mien"
+                        data-value="Miền Nam"
+                      >
+                        Miền Nam
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="mien"
+                        data-value="Miền Trung"
+                      >
+                        Miền Trung
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="mien"
+                        data-value="Miền Bắc"
+                      >
+                        Miền Bắc
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dropdown-filter">
+                  <div class="dropdown-select d-flex justify-content-between">
+                    <div class="dropdown-icon d-flex">
+                      <i class="fa-solid fa-clock"></i>
+                      <span data-dropdown="thoiGian">Thời gian</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                  <div class="dropdown-filters" id="tg">
+                    <div class="filter-wrap">
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="thoiGian"
+                        data-value="1 ngày"
+                      >
+                        1 Ngày
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="thoiGian"
+                        data-value="2 Ngày 1 Đêm"
+                      >
+                        2 Ngày 1 Đêm
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="thoiGian"
+                        data-value="3 Ngày 2 Đêm"
+                      >
+                        3 Ngày 2 Đêm
+                      </div>
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="thoiGian"
+                        data-value="4 Ngày 3 Đêm"
+                      >
+                        4 Ngày 3 Đêm
+                      </div>
+
+                      <div
+                        class="filter"
+                        data-filter="non-click"
+                        data-filter-value="thoiGian"
+                        data-value="5 Ngày 4 Đêm"
+                      >
+                        5 Ngày 4 Đêm
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12 d-flex">
+          <div class="container d-flex" style="gap: 20px; flex-wrap: wrap">
+            <button class="btn-reset" id="reset" type="button">
+              <i class="fa-solid fa-trash"></i> Đặt lại
+            </button>
+            <div
+              class="tag d-flex d-none align-items-center"
+              id="search-tag"
+              style="gap: 10px"
+            ></div>
+            <div
+              class="tag d-flex d-none align-items-center"
+              style="gap: 10px"
+              data-tag="gia"
+            ></div>
+            <div
+              class="tag d-flex d-none align-items-center"
+              style="gap: 10px"
+              data-tag="mien"
+            ></div>
+            <div
+              class="tag d-flex d-none align-items-center"
+              style="gap: 10px"
+              data-tag="thoiGian"
+            ></div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div
+            class="col-12 container mt-3 text-secondary small"
+            id="notfound"
+          ></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="container mt-3">
+            <div class="row mt-5">
+              <h2 class="col-12" id="tours">Tất cả các tour</h2>
+              <div class="col-12 tours mt-3" id="dotour"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-bottom" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">
+            <span><i class="fa-solid fa-list-ul"></i></span>
+            <span class="filter-title">Tất cả các mục</span>
+          </h1>
+
+          <button
+            type="button"
+            class="btn-close text-reset"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <form action="">
+            <div class="row text-dark">
+              <div
+                class="col-12 mb-3 d-flex justify-content-between align-items-center"
+              >
+                <h6>Lọc theo giá</h6>
+                <button class="btn-reset" type="button" id="reset-sm">
+                  <i class="fa-solid fa-rotate-left"></i> Đặt lại
+                </button>
+              </div>
+              <div class="filter-wrap">
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="gia"
+                  data-value="Dưới 1 triệu"
+                >
+                  Dưới 1 triệu
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="gia"
+                  data-value="Từ 1 - 2 triệu"
+                >
+                  Từ 1 - 2 triệu
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="gia"
+                  data-value="Từ 2 - 4 triệu"
+                >
+                  Từ 2 - 4 triệu
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="gia"
+                  data-value="Từ 4 - 7 triệu"
+                >
+                  Từ 4 - 7 triệu
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="gia"
+                  data-value="Từ 7 triệu"
+                >
+                  Từ 7 triệu
+                </div>
+              </div>
+            </div>
+            <div class="row text-dark mt-3">
+              <div class="col-12 mb-3"><h6>Lọc theo thời gian</h6></div>
+              <div class="filter-wrap">
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="thoiGian"
+                  data-value="1 Ngày"
+                >
+                  1 Ngày
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="thoiGian"
+                  data-value="2 Ngày 1 Đêm"
+                >
+                  2 Ngày 1 Đêm
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="thoiGian"
+                  data-value="3 Ngày 2 Đêm"
+                >
+                  3 Ngày 2 Đêm
+                </div>
+
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="thoiGian"
+                  data-value="4 Ngày 3 Đêm"
+                >
+                  4 Ngày 3 Đêm
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="thoiGian"
+                  id=""
+                  data-value="5 Ngày 4 Đêm"
+                >
+                  5 Ngày 4 Đêm
+                </div>
+              </div>
+            </div>
+            <div class="row text-dark mt-3">
+              <div class="col-12 mb-3"><h6>Miền</h6></div>
+              <div class="filter-wrap">
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="mien"
+                  data-value="Miền Nam"
+                >
+                  Miền Nam
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="mien"
+                  data-value="Miền Trung"
+                >
+                  Miền Trung
+                </div>
+                <div
+                  class="filter"
+                  data-filter="non-click"
+                  data-filter-value="mien"
+                  data-value="Miền Bắc"
+                >
+                  Miền Bắc
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mt-3 align-items-bottom">
+                <button
+                  class="btn btn-filter w-100"
+                  type="button"
+                  data-bs-dismiss="offcanvas"
+                >
+                  Áp dụng
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary d-none"
+        data-bs-toggle="modal"
+        id="modal"
+        data-bs-target="#modalDangNhap"
+      >
+        aa
+      </button>
+      <div
+        class="modal fade"
+        id="modalDangNhap"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+        >
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <i
+                class="fa-solid fa-right-to-bracket fa-3x"
+                style="color: #05374b"
+              ></i>
+              <p class="mt-2">
+                Để thực hiện chức năng này, bạn cần đăng nhập. Bạn có muốn đăng
+                nhập ngay không?
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Đóng
+              </button>
+              <a
+                href="../html/login.html"
+                class="btn fw-bold text-light"
+                style="background-color: #05374b"
+                >Đăng nhập</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col mt-5">
+            <img
+              src="../img/homepage-img/3-1.png"
+              class="img-fluid footer-img"
+              alt=""
+            />
+            <h5 class="text-uppercase footer-title">
+              Công ty tnhh du lịch itour
+            </h5>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">thông tin liên hệ</h5>
+            <ul class="p-0 mt-4">
+              <li class="footer-text">
+                <b>Địa chỉ: </b> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Ho
+                Chi Minh City
+              </li>
+              <li class="footer-text"><b>Hotline: </b> 0899488041</li>
+              <li class="footer-text"><b>Email: </b> itour@gmail.com</li>
+              <li class="footer-text"><b>Website: </b> itour.iuh.vn</li>
+            </ul>
+            <div class="d-flex icon-list">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-solid fa-envelope"></i>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">Kênh thanh toán</h5>
+            <img
+              src="../img/homepage-img/payment.png"
+              alt=""
+              class="footer-img"
+              style="pointer-events: none"
+            />
+            <h5 class="text-uppercase footer-title mt-3">điều khoản sử dụng</h5>
+            <ul class="p-0">
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách cookie</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Điều khoản sử dụng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script type="module" src="../js/tour.js"></script>
+    <script src="../js/autoLogin.js"></script>
+    <script type="module" src="../js/renderTour.js"></script>
+  </body>
+</html>

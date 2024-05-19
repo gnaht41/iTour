@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	height: auto;
+}
+.header{
+	background: linear-gradient(90deg, #05374b, #0a5c74);
+	width: 100%;
+	height: 300px;
+	border-radius: 0 0 100px 0;
+	color: #fff;
+	position: relative;
+	/* background: url(../img/DaNang-img/4.jpg); */
+	background-size: cover;
+}
+.header::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+	background: linear-gradient(90deg, #05374b, #0a5c74);
+	z-index: -1;
+	border: none;
+}
+.header-tittle{
+	position: absolute;
+	top: 30%;
+	
+}
+
+
+.body{
+	/* position: relative; */
+	background-color: #fff;
+	border-radius: 100px 0 0 0;
+	width: 100%;
+}
+.booking-table{
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	border: 1px solid #eee;
+}
+.booking-header{
+	border-bottom: 2px solid #eee;
+	display: flex;
+	justify-content: center;
+	padding: 20px 5px 5px 5px;
+	/* align-items: center; */
+}
+.booking-title{
+	font-size: 17px;
+}
+.booking-main{
+	padding: 10px ;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+}
+.booking-content{
+	display: flex;
+	justify-content: start;
+	gap: 20px;
+}
+.booking-content i{
+	font-size: 30px;
+}
+.booking-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.info-main{
+	font-weight: 700;
+	font-size: 15px;
+}
+.info-secondary{
+	font-size: 13px;
+	color: #696767;
+}
+.btn-booking{
+	background: linear-gradient(90deg, #05374b, #0a5c74);
+	color: #fff;
+	font-weight: 500;
+}
+.btn-booking:hover{
+	background: linear-gradient(90deg, #0a5c74, #05374b);
+	color: #fff;
+}
+.detail-title{
+	font-size: 20px;
+	font-weight: 700;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	display: flex;
+	
+	color: #fff;
+	height: 70px;
+	width: 150px;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #05374b;
+}
+.tittle-icon{
+	background-color: #ff8c08;
+	height: 100%;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+}
+.detail-title h4{
+	
+	padding: 10px;
+	/* height: 100%; */
+	flex-shrink: 0;
+	margin: 0
+}
+.title-content{
+	display: flex;
+	align-items: center;
+	font-size: 25px;
+	font-weight: 500;
+	max-width: 70%;
+}
+.detail-tour p{
+	text-align: justify;
+}
+.detail-tour img{
+	border-radius: 20px;
+	object-fit: cover;
+}
+
+.avgRate{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+}
+.avgRate .star input[type="radio"]{
+	display: none;
+}
+.avgRate .star label{
+	color: #ff8c08;
+	font-size: 30px;
+}
+.avgRate .rate{
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.comment .star input[type="radio"]{
+	display: none;
+}
+.comment{
+	gap: 20px;
+	display:flex;
+	flex-direction: column;
+}
+.comments{
+	max-height: 300px;
+	overflow: scroll;
+	position: relative;
+}
+
+#binhluan{
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 10;
+
+}
+.comment p{
+	font-size: 20px;
+	font-weight: 700;
+
+}
+.comment .star input+ label{
+	color: #ff8c08;
+	font-size: 40px;
+	cursor: pointer;
+}
+.comment .star input:checked+label~label{
+	color: #838383;
+}
+.comment .star label:active{
+	transform: scale(0.8);
+	transition: 0.2s ease;
+}
+
+.comment-content .star input{
+	display: none;
+}
+.comment-content .star input+ label{
+	color: #ff8c08;
+	font-size: 20px;
+	cursor: pointer;
+}
+.comment-content .star input:checked+label~label{
+	color: #838383;
+}
+
+.user-comment{
+	padding-top: 20px;
+	border-top: 1px solid #eee;
+}
+.btn:active{
+	transform: scale(0.98);
+	transition: 0.2s ease-in;
+	color: #fff;
+}
+
+
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+	cursor: pointer;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s ease-in;
+}
+.image img:hover{
+    transform: scale(1.05);
+}
+
+.gallery{
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
+}
+.inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+	transition: 0.2s ease-in;
+}
+.inner img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+	transition: 0.2s ease-in;
+}
+.close{
+    margin: 50px;
+    font-size: 30px;
+    color: #fff;
+    text-align: right;
+    cursor: pointer;
+}
+.close:hover{
+    color: gainsboro;
+}
+.right , .left{
+    position: fixed;
+    font-size: 50px;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    cursor: pointer;
+}
+.right{
+    right: 10px;
+}
+.left{
+    left: 10px;
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+@media screen and (max-width: 1200px) {
+	
+}
+@media screen  and (max-width: 992px){
+	.detail-title h4{
+		font-size: 18px;
+	}
+	.detail-title{
+		height: 50px;
+		width: 130px;
+	}
+	.title-content{
+		font-size: 20px;
+	
+	}
+	.tour-detail p{
+		font-size: 15px;
+	
+	}
+}
+@media screen and (max-width: 768px) {
+	.detail-title h4{
+		font-size: 15px;;
+	}
+	.title-content{
+		font-size: 17px;
+	
+	}
+	.detail-title{
+		width: 150px !important;
+	}
+}
+@media screen and (max-width: 576px){
+	
+}
+@media screen and (max-width: 480px){
+	.detail-title{
+		width: 200px !important;
+	}
+	.title-content{
+		font-size: 15px;
+		max-width: 60%;
+	}
+}
+@media screen and (max-width: 340px){
+	.detail-title{
+		gap: 0;
+		width: 150px !important;
+	}
+	.detail-title h4{
+		font-size: 12px;
+	}
+	.title-content{
+		font-size: 12px;
+		max-width: 130px !important;
+	}
+	.tittle-icon i{
+		font-size: 20px;
+	}
+}

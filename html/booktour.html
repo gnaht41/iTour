@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <title>iTour - Cùng bạn đến mọi miền đất nước</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="stylesheet" href="../css/tour.css">
+    <link rel="stylesheet" href="../css/test.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-scrolled">
+        <div class="container">
+          <a href="../html/homepage.html" class="navbar-brand ps-3">
+            <img
+              src="../img/homepage-img/3-3.png"
+              class="img-fluid"
+              id="logo"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler ms-auto me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#user"
+            id="user-toggler"
+          >
+            <span><i class="fa-solid fa-user"></i></span>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+            id="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="../html/homepage.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/tour.html" class="nav-link">Tours</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/aboutus.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/sitemap.html" class="nav-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="user">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item d-block">
+                <a href="../html/login.html" id="login" class="nav-link">Login</a>
+              </li>
+              <li class="nav-item d-block">
+                <a href="../html/signup.html" id="signUp" class="nav-link"
+                  >Sign Up</a
+                >
+              </li>
+              <li class="nav-item d-none accountAvartar">
+                <a
+                  href="../html/thongtincanhan.html"
+                  class="nav-link d-flex"
+                  style="gap: 10px; font-weight: 900"
+                  ><span><i class="fa-regular fa-circle-user"></i></span
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item d-none logOutBtn">
+                <button class="btn logout">Log out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container mb-5">
+      <div class="row">
+        <div class="col-12">
+          <div
+            class="img-warper"
+            style="
+              background: url(../img/thanhtoan/bg.png) center no-repeat;
+              background-size: cover;
+            "
+          >
+            
+          </div>
+        </div>
+      </div>
+      <form>
+        <div class="row" style="margin-bottom: 10px">
+          <div class="col-12 col-lg-8">
+            <div class="order-box">
+              <div class="order-header">
+                <h4>Thông tin tour</h4>
+              </div>
+              <div class="order-main">
+                <div class="row">
+                  <div class="col">
+                    <h5>Tên tour</h5>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm" id="tentour"
+                      value="TOUR HÀ NỘI - VỊNH HẠ LONG - HẠ LONG PARK - BÃI CHÁY"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="input-group">
+                      <span class="input-group-text">Khách sạn</span>
+                      <select name="" id="ks" class="form-control" style="appearance: none;" disabled>
+                        <option value="1">&#9733;</option>
+                        <option value="2">&#9733;&#9733;</option>
+                        <option value="3">&#9733;&#9733;&#9733;</option>
+                        <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                        <option value="5">
+                          &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <div class="input-group">
+                      <span class="input-group-text">Phương tiện</span>
+                      <input name="" id="pt" class="form-control" style="appearance: none;" disabled>
+                        
+                      </input>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-4">
+                    <div class="input-group">
+                      <span class="input-group-text">Thời gian</span>
+                      <input
+                        name=""
+                        id="songayditour"
+                        class="form-control" style="appearance: none;" disabled
+                      >
+                      </input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-box">
+              <div class="order-header">
+                <h4>Chi tiết tour</h4>
+              </div>
+              <div class="order-main">
+                <div class="row">
+                  <div class="col-12 col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-text">Người lớn</span>
+                      <button class="numberBtn" type="button"><i class="fa fa-minus"></i></button>
+                      <input type="number" value="1" id="nl" min="1" class="form-control" />
+                      <button class="numberBtn" type="button"><i class="fa fa-plus"></i></button>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-text">Trẻ em</span>
+                      <button class="numberBtn" type="button"><i class="fa fa-minus"></i></button>
+                      <input type="number" value="0" id="te" min="0" class="form-control" />
+                      <button class="numberBtn" type="button"><i class="fa fa-plus"></i></button>
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-text">Trẻ nhỏ</span>
+                      <button class="numberBtn" type="button"><i class="fa fa-minus"></i></button>
+                      <input type="number" value="0" id="tn" min="0" class="form-control" />
+                      <button class="numberBtn" type="button"><i class="fa fa-plus"></i></button>
+                      
+                    </div>
+                    <code style="color: #ff8c08; margin-left: 2px;" class="align-self-center">dưới 6 tuổi</code>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 col-sm-6">
+                    <div class="input-group">
+                      <span class="input-group-text" for="nguoilon"
+                        >Giá người lớn</span
+                      >
+                      <input
+                        type="text"
+                        id="gianguoilon"
+                        class="form-control"
+                        placeholder="1.550.000VNĐ"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="input-group">
+                      <span class="input-group-text" for="nguoilon"
+                        >Giá trẻ em</span
+                      >
+                      <input
+                        type="text"
+                        id="giate"
+                        class="form-control"
+                        placeholder="1.162.000VNĐ"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Ngày khởi hành</span>
+                      <input type="date" id="ngaykh" class="form-control" />
+                      <span></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="input-group">
+                      <span class="input-group-text">Tổng tiền</span>
+                      <input
+                        type="text" id="tongtien"
+                        class="form-control"
+                        value="2.712.000VNĐ"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="order-box sticky-top">
+              <div class="order-header">
+                <h4>Thông tin liên lạc</h4>
+              </div>
+              <div class="order-main">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-floating">
+                        <input type="text" class="form-control form-control-sm" id="hoten" placeholder="Họ tên" name="hoten">
+                        <label for="hoten">Họ tên</label>
+                      </div>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                      <div class="form-floating">
+                          <input type="text" class="form-control form-control-sm" id="sdt" placeholder="Số điện thoại" name="sdt">
+                          <label for="sdt">Số điện thoại</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                      <div class="form-floating">
+                          <input type="email" class="form-control form-control-sm" id="mail" placeholder="Email" name="mail">
+                          <label for="mail">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                      <div class="form-floating">
+                          <input type="text" class="form-control form-control-sm" id="dc" placeholder="Địa chỉ" name="dc">
+                          <label for="dc">Địa chỉ</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <textarea name="note" id="note" placeholder="Ghi chú" class="form-control" style="height: 50px;"></textarea>
+                    </div>
+                </div>
+                <div class="row mt-3 px-3">
+                    <button id="btn" type="button" class="btn  btn-block">Đặt tour</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="order-box">
+              <div class="order-header">
+                <h4>Lưu ý</h4>
+              </div>
+              <div class="order-main">
+                <div class="row">
+                  <div class="col">
+                    <p style="font-weight: 700;">
+                      <br>
+                          * Xin vui lòng nhập tên hành khách phải đúng tên như trong
+                          CMTND/Hộ chiếu (tên không dấu, có dấu cách giữa họ và
+                          tên). 
+                      </br>
+                      <br>* Quý khách vui lòng mang đầy đủ giấy tờ tùy thân.</br> 
+                      <br>
+                          * Hãy để lại thông tin chính xác để nhân viên của chúng tôi
+                          liên hệ lại cho bạn trong thời gian sớm nhất 
+                      </br>
+                      <br>
+                            * Thông tin
+                            tour sẽ được gửi về mail khách hàng sau khi đặt tour thành
+                            công
+                      </br>
+                      <br>* Booking có giá trị khi được nhân viên xác nhận !</br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <!-- Modal trigger button -->
+    <button
+      type="button" 
+      class="btn btn-primary btn-lg d-none"
+      data-bs-toggle="modal"
+      id="btn-modal"
+      data-bs-target="#modalId"
+    >
+      Launch
+    </button>
+    
+    <div
+      class="modal fade"
+      id="modalId"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+        role="document"
+      >
+        <div class="modal-content">
+          
+          <div class="modal-body text-center">
+            <i class="fa-regular fa-circle-check fa-3x" style="color: #75A47F"></i>
+            <p>
+              <b>Cảm ơn bạn đã đặt tour tại iTour.</b> Chúng tôi sẽ liên hệ với bạn
+              trong thời gian sớm nhất
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              type="button" style="border: none; font-weight: 500;"
+              class="btn btn-outline-dark"
+              href="../html/tour.html"
+            >
+              Khám phá thêm
+            </a>
+            <a type="button" style="border: none; font-weight: 500; background-color: #05374b  ; color: #fff;" class="btn" href="../html/orderdetailtour.html">
+              Xem chi tiết
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <footer style="background-color: #fff;">
+      <div class="container" >
+        <div class="row">
+          <div class="col mt-5">
+            <img
+              src="../img/homepage-img/3-1.png"
+              class="img-fluid footer-img"
+              alt=""
+            />
+            <h5 class="text-uppercase footer-title">
+              Công ty tnhh du lịch itour
+            </h5>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">thông tin liên hệ</h5>
+            <ul class="p-0 mt-4">
+              <li class="footer-text">
+                <b>Địa chỉ: </b> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Ho
+                Chi Minh City
+              </li>
+              <li class="footer-text"><b>Hotline: </b> 0899488041</li>
+              <li class="footer-text"><b>Email: </b> itour@gmail.com</li>
+              <li class="footer-text"><b>Website: </b> itour.iuh.vn</li>
+            </ul>
+            <div class="d-flex icon-list">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-solid fa-envelope"></i>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">Kênh thanh toán</h5>
+            <img
+              src="../img/homepage-img/payment.png"
+              alt=""
+              class="footer-img"
+              style="pointer-events: none"
+            />
+            <h5 class="text-uppercase footer-title mt-3">điều khoản sử dụng</h5>
+            <ul class="p-0">
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách cookie</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Điều khoản sử dụng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate-min.js"></script>
+
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script type="module" src="../js/booktour.js"></script>
+    <script src="../js/autoLogin.js"></script>
+  </body>
+</html>

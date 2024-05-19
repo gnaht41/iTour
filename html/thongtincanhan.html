@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTour - Cùng bạn đến mọi miền đất nước</title>
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/600ee70b68.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="stylesheet" href="../css/thongtincanhan.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top navbar-scrolled">
+      <div class="container">
+        <a href="../html/homepage.html" class="navbar-brand ps-3">
+          <img
+            src="../img/homepage-img/3-3.png"
+            class="img-fluid"
+            id="logo"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler ms-auto me-3"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#user"
+          id="user-toggler"
+        >
+          <span><i class="fa-solid fa-user"></i></span>
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+          id="navbar-toggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="../html/homepage.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="../html/tour.html" class="nav-link">Tours</a>
+            </li>
+            <li class="nav-item">
+              <a href="../html/aboutus.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="../html/sitemap.html" class="nav-link">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="user">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item d-block">
+              <a href="../html/login.html" id="login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item d-block">
+              <a href="../html/signup.html" id="signUp" class="nav-link"
+                >Sign Up</a
+              >
+            </li>
+            <li class="nav-item d-none accountAvartar">
+              <a
+                href="../html/thongtincanhan.html"
+                class="nav-link d-flex"
+                style="gap: 10px; font-weight: 900"
+                ><span><i class="fa-regular fa-circle-user"></i></span
+                >Account</a
+              >
+            </li>
+            <li class="nav-item d-none logOutBtn">
+              <button class="btn logout">Log out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container-fluid px-4"
+      style="
+        margin-top: 100px !important;
+        margin-bottom: 150px !important;
+        position: relative;
+      "
+    >
+      <div class="alert mt-3 d-none fade alert-success">
+        <strong>Thông báo!</strong> cập nhật thông tin thành công.
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-4 col-sm-12 text-center">
+          <div class="row">
+            <div
+              class="col-lg-12 d-sm-flex justify-content-center d-flex justify-content-center"
+            >
+              <img
+                src="../img/thongtincanhan/9187604.png"
+                alt=""
+                id="img"
+                class="img-fluid w-50 h-auto w-md-25 h-md-25"
+              />
+            </div>
+          </div>
+          <h3
+            class="col-lg-12 mt-3 d-sm-flex justify-content-center d-flex justify-content-center"
+          >
+            Hello!
+          </h3>
+          <p
+            class="fst-italic d-sm-flex justify-content-center d-flex justify-content-center"
+            id="hello"
+            style="font-weight: bold; font-size: 20px"
+          ></p>
+          <a
+            href="../html/orderdetailtour.html"
+            class="btn btn-secondary fw-bold"
+            type="button"
+            id="dh"
+          >
+            <i class="fa-solid fa-cart-shopping"></i> Đơn hàng
+            <span class="badge bg-danger"></span>
+          </a>
+        </div>
+        <div
+          class="col-md-8 mt-3 col-sm-12 border border-2"
+          style="border-radius: 30px"
+        >
+          <div
+            class="row"
+            style="
+              background-color: #1f4c6b;
+              border-top-left-radius: 30px;
+              border-top-right-radius: 30px;
+            "
+          >
+            <div
+              class="col-12 d-flex justify-content-center text-center responsive-text-title"
+            >
+              <h3 class="fw-bold text-white pt-3">THÔNG TIN CÁ NHÂN</h3>
+            </div>
+            <p
+              class="text-center fw-bold responsive-text fst-italic text-white"
+            >
+              Cập nhật thông tin của quý khách để tối ưu dịch vụ nhé !
+            </p>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Họ và tên:
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-0">
+              <input
+                id="name"
+                type="text"
+                value="Chưa có thông tin"
+                class="form-control"
+                disabled
+                data-change="name"
+                data-invalid="Tên phải bắt đầu bằng chữ in hoa"
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="name"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Mật khẩu
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <input
+                id="pass"
+                type="password"
+                value="Chưa có thông tin"
+                class="form-control"
+                disabled
+                data-change="pass"
+                data-invalid="Mật khẩu phải dài ít nhất 6 kí tự không chứa khoảng trắng, ít nhất 1 kí tự hoa, 1 kí tự thường, 1 chữ số, 1 kí tự đặc biệt"
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="pass"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Số điện thoại
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <input
+                id="phone"
+                type="text"
+                value="Chưa có thông tin"
+                class="form-control"
+                disabled
+                data-change="sdt"
+                data-invalid="Số điện thoại phải là số, bắt đầu là 0 hoặc +84, dài từ 10 đến 12 kí tự"
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="sdt"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-4 fw-bold"
+            >
+              Căn cước công dân
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <input
+                id="cccd"
+                type="text"
+                value="Chưa có thông tin"
+                class="form-control"
+                disabled
+                data-change="cccd"
+                data-invalid="Căn cước công dân không hợp lệ"
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="cccd"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Email
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <input
+                id="email"
+                type="text"
+                value="Chưa có thông tin"
+                class="form-control"
+                disabled
+                data-change="mail"
+                data-invalid="Mail không hợp lệ"
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="mail"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Ngày sinh
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <input
+                id="birthdate"
+                type="date"
+                value=""
+                class="form-control"
+                disabled
+                data-change="dob"
+                data-invalid="Ngày sinh không hợp lệ"
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="dob"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Giới tính
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <div class="input-group">
+                <div class="form-check me-3">
+                  <input
+                    type="radio"
+                    value="0"
+                    name="gt"
+                    id="0"
+                    disabled
+                    data-change="gt"
+                    data-state="none"
+                    class="form-check-input"
+                  />
+                  <label for="0" class="form-check-label">Nam</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    value="1"
+                    name="gt"
+                    id="1"
+                    disabled
+                    class="form-check-input"
+                  />
+                  <label for="1" class="form-check-label">Nữ</label>
+                </div>
+              </div>
+              <span style="color: red" id="gtMsg"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="gt"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="row border-0 border-top">
+            <div
+              class="col-md-3 col-sm-4 col-12 py-md-4 py-sm-2 py-xs-2 fw-bold"
+            >
+              Địa chỉ
+            </div>
+            <div class="col-md-6 col-10 py-md-4 py-sm-2 py-xs-2">
+              <input
+                id="address"
+                type="text"
+                value="Chưa có thông tin"
+                class="form-control"
+                disabled
+                data-change="dc"
+                data-invalid=""
+              />
+              <span style="color: red"></span>
+            </div>
+            <div class="col-md-3 col-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-change="dc"
+                data-state="none"
+              >
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row border-0 border-top">
+            <div class="col-9"></div>
+            <div class="col-12 my-2 py-md-4 py-sm-2 py-xs-2">
+              <button
+                class="btn text-light fw-bold float-end"
+                id="save"
+                type="button"
+                style="background-color: #1f4c6b"
+              >
+                Cập nhật
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="module" src="../js/thongtincanhan.js"></script>
+    <script src="../js/autoLogin.js"></script>
+  </body>
+</html>

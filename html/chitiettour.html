@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTour - Tour</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    
+    <script
+      src="https://kit.fontawesome.com/600ee70b68.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="stylesheet" href="../css/ct_tour.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top navbar-scrolled"
+      >
+        <div class="container">
+          <a href="../html/homepage.html" class="navbar-brand ps-3">
+            <img
+              src="../img/homepage-img/3-3.png"
+              class="img-fluid"
+              id="logo"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler ms-auto me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#user"
+            id="user-toggler"
+          >
+            <span><i class="fa-solid fa-user"></i></span>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+            id="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="../html/homepage.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/tour.html" class="nav-link">Tours</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/aboutus.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/sitemap.html" class="nav-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="user">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item d-block">
+                <a href="../html/login.html" id="login" class="nav-link"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item d-block">
+                <a href="../html/signup.html" id="signUp" class="nav-link"
+                  >Sign Up</a
+                >
+              </li>
+              <li class="nav-item d-none accountAvartar">
+                <a
+                  href="../html/thongtincanhan.html"
+                  class="nav-link d-flex"
+                  style="gap: 10px; font-weight: 900"
+                  ><span><i class="fa-regular fa-circle-user"></i></span
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item d-none logOutBtn">
+                <button class="btn logout">Log out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>   
+        <div class="container  pt-5">
+          <div class="row " >
+            <div class="col-12 col-lg-9 text-dark d-flex flex-column" style="gap: 40px">
+              <div class="booking-table d-block d-lg-none mt-5">
+                <div class="booking-header">
+                  <h5 class="booking-title">TOUR KHÁM PHÁ ĐẢO NGỌC PHÚ QUỐC</h5>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-12 mt-3">
+                    <div class="booking-content">
+                      <i class="fa-solid fa-location-arrow"></i>
+                      <div class="booking-info">
+                        <div class="info-main">Điểm khởi hành</div>
+                        <div class="info-secondary khoihanh" >Hồ Chí Minh</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-12 mt-3">
+                    <div class="booking-content">
+                      <i class="fa-solid fa-location-dot"></i></i>
+                      <div class="booking-info">
+                        <div class="info-main">Điểm đến</div>
+                        <div class="info-secondary diemden" >Phú Quốc</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-12 mt-3">
+                    <div class="booking-content">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <div class="booking-info">
+                        <div class="info-main">Thời gian</div>
+                        <div class="info-secondary thoigian">4 Ngày 3 Đêm</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-12 mt-3">
+                    <div class="booking-content">
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      <div class="booking-info">
+                        <div class="info-main">Giá</div>
+                        <div class="info-secondary"><span class="gia">3,530,000</span>/ người</div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-block mt-3 btn-booking">Đặt ngay</button>
+                </div>
+              </div>
+              <div class="row" id="hinh">
+                <div class="col-sm-6 mt-3 col-lg-6 ">
+                  <div class="image">
+                    <img src="../img/ct_tour/1030874/2.webp" alt="">
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-6 ">
+                  <div class="row mt-3">
+                    <div class="col-6 ">
+                      <div class="image">
+                    <img src="../img/ct_tour/1030874/3.webp" alt="">
+                      </div>
+                    </div>
+                    <div class="col-6 ">
+                      <div class="image">
+                    <img src="../img/ct_tour/1030874/4.webp" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-6 ">
+                      <div class="image">
+                    <img src="../img/ct_tour/1030874/5.webp" alt="">
+                      </div>
+                    </div>
+                    <div class="col-6 ">
+                      <div class=" image ">
+                    <img src="../img/ct_tour/1030874/8.webp" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="noidung" id="noidung">
+                <div class="tour-detail mt-3">
+                  <div class="d-flex" style="gap: 20px">
+                      <div class="detail-title">
+                          <div class="tittle-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                          <h4>Ngày 1</h4>
+                      </div>
+                      <div class="title-content">
+                      ĐẢO NGỌC PHÚ QUỐC - NAM ĐẢO (ĂN TRƯA, TỐI)
+                      </div>
+                  </div>
+                  <div class="detail-tour mt-3">
+                      <p> <b>Sáng</b>: Xe và hướng dẫn viên đón Quý khách tại sân bay Phú Quốc. Sau đó xe đưa Quý khách đi dùng cơm trưa tại nhà hàng trung tâm, dùng cơm trưa xong Quý khách sẽ quay về khách sạn nhận phòng và nghỉ ngơi. </p>
+                      <p> <b>Trưa</b>:  Quý khách sẽ bắt đầu chuyến tham quan đầu tiên tại Nam đảo: Các làng nghề truyền thống lâu đời, các điểm di tích, tham quan nổi tiếng ở trên đảo: Cở sở sản xuất ngọc trai, Cơ sở sản xuất rượu sim rừng, Chùa Hộ Quốc, Nhà tù Phú Quốc, nhà thùng sản xuất nước mắm…
+                      <br>Khu nuôi cấy Ngọc Trai: Từ xa xưa, ngọc trai là một tặng phẩm quý giá từ thiên nhiên, chỉ vua chúa và giới quý tộc mới có cơ hội sở hữu. Qua nhiều năm tháng nghiên cứu, ngày nay chúng ta đã nắm giữ quy trình của tự nhiên và có thể gia tăng sản lượng ngọc trai nuôi cấy trong môi trường tự nhiên, tạo ra những hạt ngọc tròn hơn, sáng hơn và đẹp hơn trước.
+                      <br> Cơ sở sản xuất rượu vang Sim (loại vang riêng của đảo): Một loại rượu đặc sản tại địa phương, thưởng thức rượu Sim rừng miễn phí.
+                      <br> Chùa Hộ Quốc: Hay còn gọi là Thuyền Viện Trúc Lâm, thường được người dân địa phương hay du khách đến viếng thăm và cầu nguyện về sức khỏe, may mắn..
+                      <br> Di tích lịch sử nhà tù Phú Quốc: Trại giam Tù binh Chiến tranh Phú Quốc, hay Trại giam Tù binh Cộng sản Phú Quốc là một trại giam nằm tại thị trấn An Thới ở cực nam đảo Phú Quốc. Trong Chiến tranh Đông Dương, trại giam này có tên là Nhà lao Cây Dừa. Đây là trại giam tù binh trung tâm toàn Việt Nam Cộng hòa, từng giam giữ hơn 32.000 tù binh (40.000 tù nhân nếu tính cả tù chính trị nhiều thời kỳ).
+                      <br> Nhà thùng sản xuất nước mắm: Nhà thùng là một trong những điểm đến hấp dẫn không thể bỏ qua khi đặt chân đến đảo ngọc.
+                      </p>
+                      <p> <b>Tối</b>: Quý khách dùng bữa tối tại nhà hàng, tự do nghỉ ngơi và khám phá thành phố Phú Quốc về đêm.
+                      </p>
+                      <div class="image"><img src="../img/ct_tour/1030874/1.webp" class="img-fluid" alt=""></div>
+                  </div>
+              </div>
+              
+              <div class="tour-detail mt-3">
+                  <div class="d-flex" style="gap: 20px">
+                      <div class="detail-title">
+                          <div class="tittle-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                          <h4>Ngày 1</h4>
+                      </div>
+                      <div class="title-content">
+                      KHÁM PHÁ 3 ĐẢO BẰNG CANO (ĂN SÁNG, TRƯA, TỐI).
+                      </div>
+                  </div>
+                  <div class="detail-tour mt-3">
+                      <p> <b>Sáng</b>: Quý khách dùng bữa sáng đã chuẩn bị sẵn tại khách sạn. Xe và hướng dẫn viên đến đón đoàn khởi hành tham quan. Quý khách lên cano khám phá 3 đảo tại phía Nam Đảo Phú Quốc. Công viên san hô Seaworld: với hơn 200 loài san hô lớn nhỏ đa màu sắc được các huấn luyện viên chuyên nghiệp sẽ hỗ trợ cho bạn khám phá thế giới san hô tại đây (chi phí tự túc). Hòn Mây Rút: Khám phá hòn được mệnh danh Robinson một trong hòn lớn nhất đoàn checkin bãi biển dài với xích đu, võng, hàng dừa thoai thoải những hòn đá được thiên nhiên ban tặng. Hòn Móng Tay: được mệnh danh là Madives của Phú Quốc, đoàn tự do checkin chụp hình và tắm biển với làn nước trong xanh tại đây.</p>
+                      <p> <b>Trưa</b>:  Quý khách dùng bữa trưa trên đảo Hòn Gầm Ghì: Đắm mình trong làn nước trong vắt và lặn ngắm vương quốc san hô.
+                      </p>
+                      <p><b>Chiều</b>: Xe và hướng dẫn viên sẽ đưa Quý khách đến Sunset Sanato địa điểm ngắm hoàng hôn đẹp nhất Phú Quốc (Vé vào cổng chi phí tự túc)</p>
+                      <p> <b>Tối</b>: Quý khách sẽ ăn tối tại nhà hàng trung tâm, sau đó tham quan chợ đêm và khám phá vẻ đẹp về đêm của Đảo Ngọc.
+                      </p>
+                      <div class="image"><img src="../img/ct_tour/1030874/6.webp" class="img-fluid" alt=""></div>
+                  </div>
+              </div>
+              
+              <div class="tour-detail mt-3">
+                  <div class="d-flex" style="gap: 20px">
+                      <div class="detail-title">
+                          <div class="tittle-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                          <h4>Ngày 3</h4>
+                      </div>
+                      <div class="title-content">
+                      THĂM QUAN BẮC ĐẢO (ĂN SÁNG, TRƯA)
+                      </div>
+                  </div>
+                  <div class="detail-tour mt-3">
+                      <p> <b>Sáng</b>: Du khách sẽ đucợ đi tham quan các địa điểm: 
+                      <br>Vườn Thú Mở - Vinpearl Safari Phú Quốc theo mô hình Safari Singapore. (vé vào cổng tự túc). Phú Quốc theo mô hình Safari Singapore Công viên Chăm sóc và Bảo tồn Động vật Vinpearl Safari Phú Quốc có tổng diện tích gần 500ha, được xây dựng theo mô hình bán hoang dã, trong đó, các động vật quý hiếm được đảm bảo chăm sóc và bảo tồn trong môi trường thiên nhiên mở. Hiện Công viên đã có khoảng 3.000 cá thể thuộc 150 chủng loài, được sưu tầm, bảo tồn từ các động vật hoang dã quý hiếm địa phương, đồng thời quy tụ từ nhiều vùng địa sinh học đặc trưng trên thế giới như Nam Phi, Châu Âu, Úc, Mỹ...
+                      <br> VinWonder Phú Quốc - Công viên chủ đề đầu tiên tại Việt Nam (vé vào cổng tự túc).Vinwonder nơi được ví như một "Disneyland" với nhiều trò chơi trong nhà và ngoài trời dành cho mọi lứa tuổi như: Tàu lượng siêu tốc, Đu quay vòng xoay, Đĩa, quay siêu tốc, Đu quay văng... Biểu diễn cá heo, Công viên nước, Thủy cung (nhiều loài sinh vật biển và bò sát quý hiếm). Hoạt náo, lễ hội đường phố, Rạp chiếu phim 5D, Phố mua sắm và ẩm thực đường phố.
+                      </p>
+                      <p> <b>Trưa</b>:  Ăn trưa tự túc.
+                      </p>
+                      <p><b>Chiều</b>: Tiếp tục chuyến tham quan. Khám phá Khu Grand World World thơ mộng và ngắm nhìn các dãy shophouse đa màu sắc mang phong cách địa trung hải.</p>
+                      <p> <b>Tối</b>: Quý khách tự túc ăn tối tại nhà hàng ở Grandword và sau đó về lại khách sạn tắm hồ bơi và nghỉ ngơi.
+                      </p>
+                      <div class="image"><img src="../img/ct_tour/1030874/7.webp" class="img-fluid" alt=""></div>
+                  </div>
+              </div>
+              <div class="tour-detail mt-3">
+                  <div class="d-flex" style="gap: 20px">
+                      <div class="detail-title">
+                          <div class="tittle-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                          <h4>Ngày 4</h4>
+                      </div>
+                      <div class="title-content">
+                      TẠM BIỆT ĐẢO NGỌC PHÚ QUỐC - HỒ CHÍ MINH (ĂN SÁNG)
+                      </div>
+                  </div>
+                  <div class="detail-tour mt-3">
+                      <p> <b>Sáng</b>: Quý khách dùng bữa sáng đã chuẩn bị sẵn tại khách sạn. tự do trãi nghiệm dịch vụ tại khách sạn. Sau đó Quý khách làm thủ tục trả phòng, xe và HDV bắt đầu đưa Quý khách ghé Trung tâm mua sắm để Quý khách chọn những món đặc sản Phú Quốc về làm quà cho người thân.
+                      </p>
+                      <p> <b>Trưa</b>:  Quý khách dùng bữa trưa với món ăn đặc sắc tại Phú Quốc: Bánh Canh Ghẹ/Bún quậy/Hủ tiếu hải sản. Sau đó di chuyển ra sân bay/bến tàu, khởi hành về lại đất liền theo giờ bay/giờ tàu chạy. Hẹn gặp lại Qúy khách trong những hành trình tiếp theo!
+                      </p>
+                  </div>
+              </div>
+              </div>
+              
+            </div>
+            <div class="col mt-3 d-none d-lg-block" style="position: relative;">
+              <div class="container " style="position: sticky; top: 70px;">
+                <div class="booking-table">
+                  <div class="booking-header">
+                    <h5 class="booking-title">TOUR KHÁM PHÁ ĐẢO NGỌC PHÚ QUỐC</h5>
+                  </div>
+                  <div class="booking-main">
+                    <div class="booking-content">
+                      <i class="fa-solid fa-location-arrow"></i>
+                      <div class="booking-info">
+                        <div class="info-main">Điểm khởi hành</div>
+                        <div class="info-secondary khoihanh">Hồ Chí Minh</div>
+                      </div>
+                    </div>
+                    <div class="booking-content">
+                      <i class="fa-solid fa-location-dot"></i></i>
+                      <div class="booking-info">
+                        <div class="info-main">Điểm đến</div>
+                        <div class="info-secondary diemden">Phú Quốc</div>
+                      </div>
+                    </div>
+                    <div class="booking-content">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <div class="booking-info">
+                        <div class="info-main">Thời gian</div>
+                        <div class="info-secondary thoigian">4 Ngày 3 Đêm</div>
+                      </div>
+                    </div>
+                    <div class="booking-content">
+                      <i class="fa-solid fa-dollar-sign"></i>
+                      <div class="booking-info">
+                        <div class="info-main">Giá</div>
+                        <div class="info-secondary"><span class="gia">3,530,000</span> / người</div>
+                      </div>
+                    </div>
+                    <button class="btn btn-block btn-booking">Đặt ngay</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="comment-container">
+              <div class="row user-comment">
+                <div class="col-12 col-md-3 avgRate">
+                  <div class="rate" id="numberRate">0.0</div>
+                  <div class="star" id="totalStar">
+                    <input type="radio" name="rate"  value="1">
+                    <label class="fa-solid fa-star" style="color:#838383"></label>
+                    <input type="radio" name="rate"  value="2">
+                    <label  class="fa-solid fa-star"
+                    style="color:#838383"></label>
+                    <input type="radio" name="rate"  value="3">
+                    <label  class="fa-solid fa-star"
+                    style="color:#838383"></label>
+                    <input type="radio" name="rate"  value="4">
+                    <label class="fa-solid fa-star"
+                    style="color:#838383"></label>
+                    <input type="radio" name="rate"  value="5">
+                    <label  class="fa-solid fa-star"
+                    style="color:#838383"></label>
+                  </div>
+                  <p class="text-secondary" id="luotDanhGia">0 lượt đánh giá</p>
+                </div>
+                <div class="col-12 col-md-9 comment">
+                    <p>Đánh giá</p>
+                    <div class="star" id="star-comment">
+                      <input type="radio" name="rate" id="rate1" value="1">
+                      <label for="rate1" class="fa-solid fa-star"></label>
+                      <input type="radio" name="rate" id="rate2" value="2">
+                      <label for="rate2" class="fa-solid fa-star"></label>
+                      <input type="radio" name="rate" id="rate3" value="3">
+                      <label for="rate3" class="fa-solid fa-star"></label>
+                      <input type="radio" name="rate" id="rate4" value="4">
+                      <label for="rate4" class="fa-solid fa-star"></label>
+                      <input type="radio" name="rate" id="rate5" value="5" checked>
+                      <label for="rate5" class="fa-solid fa-star"></label>
+                    </div>
+                    <textarea name="comment" cols="10" rows="3" placeholder="Mô tả trải nghiệm của bạn" disabled id = "comment_field" class="form-control"></textarea>
+                    <button type="button" class="btn btn-primary mt-2 btn-booking" id="summitComment">Gửi</button>
+                  
+                </div>
+                <div class="col-12 mt-5 comments" >
+                  <p style="font-size: 30px; font-weight: 500;">Bình luận:</p>
+                  <div class="user-comment">
+                    <div class="avt d-flex" style="gap: 20px">
+                      <img src="../img/thongtincanhan/9187604.png" class="img-fluid" style="width: 30px;" alt="">
+                      <div class="user-name">Nguyễn Văn A</div>
+                    </div>
+                    <div class="comment-content mt-3">
+                     
+                      <div class="star">
+                        <input type="radio" name="" value="1">
+                        <label  class="fa-solid fa-star"></label>
+                        <input type="radio" name=""  value="2">
+                        <label class="fa-solid fa-star"></label>
+                        <input type="radio" name=""  value="3">
+                        <label  class="fa-solid fa-star"></label>
+                        <input type="radio" name=""  value="4">
+                        <label  class="fa-solid fa-star"></label>
+                        <input type="radio" name=""  value="5" checked>
+                        <label class="fa-solid fa-star"></label>
+                      </div>
+                      <p class="comment-text">Tour rất tuyệt vời, hướng dẫn viên nhiệt tình, thức ăn ngon, khách sạn sạch sẽ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="gallery" style="z-index: 100;">
+          <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="inner">
+              <img src="" alt="">
+          </div>
+          <div class="right">
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="left">
+            <i class="fa-solid fa-caret-left"></i>
+          </div>
+      </div>
+      <button
+        class="btn btn-primary d-none"
+        data-bs-toggle="modal"
+        id="modal"
+        data-bs-target="#modalDangNhap"
+      >
+        aa
+      </button>
+      <div
+        class="modal fade"
+        id="modalDangNhap"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md"
+        >
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <i
+                class="fa-solid fa-right-to-bracket fa-3x"
+                style="color: #05374b"
+              ></i>
+              <p class="mt-2">
+                Để thực hiện chức năng này, bạn cần đăng nhập. Bạn có muốn đăng
+                nhập ngay không?
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Đóng
+              </button>
+              <a
+                href="../html/login.html"
+                class="btn fw-bold text-light"
+                style="background-color: #05374b"
+                >Đăng nhập</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col mt-5">
+            <img
+              src="../img/homepage-img/3-1.png"
+              class="img-fluid footer-img"
+              alt=""
+            />
+            <h5 class="text-uppercase footer-title">
+              Công ty tnhh du lịch itour
+            </h5>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">thông tin liên hệ</h5>
+            <ul class="p-0 mt-4">
+              <li class="footer-text">
+                <b>Địa chỉ: </b> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Ho
+                Chi Minh City
+              </li>
+              <li class="footer-text"><b>Hotline: </b> 0899488041</li>
+              <li class="footer-text"><b>Email: </b> itour@gmail.com</li>
+              <li class="footer-text"><b>Website: </b> itour.iuh.vn</li>
+            </ul>
+            <div class="d-flex icon-list">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-solid fa-envelope"></i>
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+          </div>
+          <div class="col mb-4 mt-5">
+            <h5 class="text-uppercase footer-title">Kênh thanh toán</h5>
+            <img
+              src="../img/homepage-img/payment.png"
+              alt=""
+              class="footer-img img-fluid"
+              style="pointer-events: none"
+            />
+            <h5 class="text-uppercase footer-title mt-3">điều khoản sử dụng</h5>
+            <ul class="p-0">
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách bảo mật</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Chính sách cookie</a>
+              </li>
+              <li class="footer-text">
+                <a href="#" class="footer-link">Điều khoản sử dụng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+  <script src="../js/ct_tour.js"></script>
+  <script src="../js/autoLogin.js"></script>
+  <script type="module" src="../js/renderChiTietTour.js"></script>
+  <script src="../js/comments.js"></script>
+</html>

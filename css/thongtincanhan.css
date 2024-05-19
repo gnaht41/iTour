@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.alert{
+    position: sticky;
+    top: 70px;
+    left: 100%;
+    width: 350px;
+    transition: 2s ease-in;
+}
+.form-control{
+    border: none;
+}
+
+.form-control:disabled{
+    background-color: #fff;
+
+}
+.form-control:focus{
+    
+    outline: none;
+    box-shadow: none;
+}
+@media screen and (max-width: 768px){ 
+    .alert{
+        width: auto;
+    }
+    
+}
+@media screen and (max-width: 360px) {
+    .btn-secondary{
+        padding: 5px;
+        font-size: 10px;
+    }
+}

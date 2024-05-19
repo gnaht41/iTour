@@ -1,0 +1,67 @@
+/***** Colors & Sizes *****/
+:root {
+    --color-primary: #0088CE;
+    --color-primary-tint: #FFF;
+    --color-accent: #005399;
+    --color-accent-tint: #FFF;
+    --color-line: #ccc;
+  
+    --item-width: 200px;
+    --item-gap: 20px;
+  }
+  /***** Vertical Sitemap *****/
+  /* body{
+    background: url(../img/sitemap/bg.webp) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(2px), brightness(0.5);
+  } */
+  @font-face {
+    font-family: 'cadena';
+    src: url(../fonts/icielCadena.woff);
+}
+  h1{
+    text-align: center;
+    color: #FFF;
+    font-size: 3em;
+    margin-top: 50px;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px #000;
+    font-family: 'cadena';
+  }
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main{
+    overflow-x: hidden;
+  }
+  footer{
+    margin-top: auto;
+    max-height: fit-content;
+  }
+  /* Responsive */
+  /* tablet */
+  @media only screen and (max-width: 768px) {
+    #map{
+      margin-top: 50px;
+    }
+  }
+  /* mobile */
+  @media only screen and (max-width: 576px) {
+   main{
+    margin-top: auto;
+   }
+  }
+  
+  /***** End Vertical Sitemap *****/
+  @media screen and (max-width: 360px) {
+    main{
+      margin-top: auto;
+     }
+     footer{
+       margin-top: 50px;}
+  }

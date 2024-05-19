@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iTour - Cùng bạn đến mọi miền đất nước</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/android-chrome-512x512.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/apple-touch-icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <script
+      src="https://kit.fontawesome.com/600ee70b68.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/slick.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
+    <link rel="stylesheet" href="../css/dangki.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top navbar-scrolled"
+      >
+        <div class="container">
+          <a href="../html/homepage.html" class="navbar-brand ps-3">
+            <img
+              src="../img/homepage-img/3-3.png"
+              class="img-fluid"
+              id="logo"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler ms-auto me-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#user"
+            id="user-toggler"
+          >
+            <span><i class="fa-solid fa-user"></i></span>
+          </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+            id="navbar-toggler"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="../html/homepage.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/tour.html" class="nav-link">Tours</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/aboutus.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="../html/sitemap.html" class="nav-link">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="user">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item d-block">
+                <a href="../html/login.html" id="login" class="nav-link"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item d-block">
+                <a href="../html/signup.html" id="signUp" class="nav-link"
+                  >Sign Up</a
+                >
+              </li>
+              <li class="nav-item d-none accountAvartar">
+                <a
+                  href="../html/thongtincanhan.html"
+                  class="nav-link d-flex"
+                  style="gap: 10px; font-weight: 900"
+                  ><span><i class="fa-regular fa-circle-user"></i></span
+                  >Account</a
+                >
+              </li>
+              <li class="nav-item d-none logOutBtn">
+                <button class="btn logout">Log out</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid d-flex justify-content-center">
+        <div
+          class="row form-dk justify-content-center align-items-center"
+          style="overflow: hidden"
+        >
+          <div class="col-12 col-lg-5 d-block d-lg-none body1">
+            <p class="col-12 text-center title text-light d-none d-md-block">
+              DISCOVER MORE: LOG IN FOR YOUR <br />
+              NEXT AVENTURE
+            </p>
+
+            <div class="col-12 content title d-flex flex-column">
+              <p class="text-center text-light">
+                Register with your personal details<br />
+                to use all of site features
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-7 body2" style="background-color: #ffffff">
+            <h1 class="text-center title2 mb-3">Log in</h1>
+
+            <div
+              class="col col-lg-12 d-flex justify-content-center align-items-center"
+              style="gap: 20px"
+            >
+              <div class="icon d-flex align-items-center">
+                <i class="fa fa-google-plus fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="icon d-flex align-items-center">
+                <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+              </div>
+              <div class="icon d-flex align-items-center">
+                <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+              </div>
+              <div class="icon d-flex align-items-center">
+                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <p class="text-center mt-3 fw-bold">or use your email password</p>
+
+            <div class="col-12">
+              <div
+                class="form d-flex flex-column justify-content-center align-items-center"
+              >
+                <div class="col-12 col-lg-8 mt-3">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder="Email or Phone number"
+                      name="email"
+                    />
+                    <label for="email">Email or Phone number</label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-8 mt-3">
+                  <div class="form-floating d-flex">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="pass"
+                      placeholder="Enter email"
+                      name="email"
+                    />
+                    <label for="pass">Password</label>
+                    <span id="pass-hide">
+                      <i class="fa-solid fa-eye-slash"></i
+                    ></span>
+                  </div>
+                </div>
+
+                <div
+                  class="col-8 mt-4 d-flex justify-content-center"
+                  style="gap: 30px"
+                >
+                  <button
+                    type="button"
+                    class="btn btn-lg fw-bold"
+                    id="loginbtn"
+                  >
+                    LOGIN
+                  </button>
+                  <a
+                    href="../html/signup.html"
+                    type="button"
+                    class="btn btn-lg fw-bold d-flex align-items-center"
+                    style="--style: dangki"
+                  >
+                    or sign up
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-none d-lg-block body3">
+            <p class="col-12 text-center title text-light d-none d-md-block">
+              DISCOVER MORE: LOG IN FOR YOUR <br />
+              NEXT AVENTURE
+            </p>
+
+            <div class="col-12 content title d-flex flex-column">
+              <p class="text-center text-light">
+                Register with your personal details<br />
+                to use all of site features
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate-min.js"></script>
+
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/autoLogin.js"></script>
+  </body>
+</html>

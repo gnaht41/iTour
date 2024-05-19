@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+   
+}
+.parallax::-webkit-scrollbar{
+    width: 0;
+}
+.parallax{
+    background-image: url(../img/about-us/parallax-bg3.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+.parallax-header{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: transform 0.3s ease-out;
+}
+.parallax-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+}
+.cloud-left{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 30%;
+}
+.cloud-right{
+    position: absolute;
+    top: 20%;
+    right: 0;
+    width: 30%;
+    transform: scaleX(-1);
+
+}
+.section2{
+    background-color: #222;
+    padding: 50px 0;
+    height: 1000px;
+}
+#iTour{
+    padding-bottom: 200px !important;
+    /* background-color: #222222; */
+}
+.parallax-scroll{
+    /* margin-top: 100px; */
+    margin-bottom: 300px;
+    height: 300px;
+    background-color: #222;
+    background-image: url(../img/about-us/test-bg.avif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.full-height {
+	height: 100vh;
+}
+
+.left-to-right {
+	transform: translateX(-150%);
+}
+
+.left-to-right.start {
+	transition: 0.7s ease-in-out;
+	transform: translateX(0);
+}
+.zoom {
+	transform: scale(0);
+}
+
+.zoom.start {
+	transition: 0.5s ease-in-out;
+	transform: unset;
+}
+
+.parallax-title{
+    font-size: 50px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    
+}
+#team {
+	/* background: linear-gradient(180deg, #017c2c 50%, #fff 50%); */
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+    --spacing: 25px;
+    --columns: 4;
+    gap: var(--spacing);
+    position: absolute;
+    bottom: 0;
+    transform: translateY(80%);
+}
+
+.icon-card{
+    width: calc(calc(100% / var(--columns)) - var(--spacing));
+    height: 50%;
+    overflow: hidden;
+    border-radius: 10px ;
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s ease-in;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.icon-img{
+    flex-shrink: 0;
+    position: relative;
+}
+.icon-title{
+    font-size: 20px;
+
+}
+.icon-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap: 10px;
+    margin-top: auto;
+}
+.profile{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    color: #fff;
+    font-weight: 900;
+    background-color: #222;
+}
+.profile-img{
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
+}
+.slick-track{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media  screen and (min-width: 1200px) {
+    
+}
+@media screen  and (max-width: 1200px){
+    #team{
+        padding: 0 35px;
+    }
+    .icon-card{
+        flex-grow: 1;
+
+    }
+    .icon-title{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 992px){
+    .parallax-header{
+        transform: translate(-50%,90%);
+    }
+    #team{
+        padding: 0 20px;
+    }
+    .icon-card{
+        height: 45%;
+    }
+}
+@media screen and (max-width: 768px){
+    .introduce-text{
+        font-size: 15px;
+    }
+    .introduce-text-title{
+        font-size: 17px;
+    }
+    #iTour{
+        padding-bottom: 150px !important;
+    }
+    .parallax{
+        height: 450px;
+    }
+    .parallax-header{
+        transform: translate(-50%,100%);
+    }
+    #team{
+        padding: 0;
+        --spacing: 15px;
+    }
+    .icon-card{
+        height: 40%;
+    }
+    .icon-title{
+        font-size: 15px;
+    }
+    .icon-bottom{
+        margin: 0;
+    }
+    .icon-description{
+        font-size: 12px;
+    }
+    .parallax-scroll{
+        margin-bottom: 200px;
+    }
+}
+@media screen and (max-width: 576px){
+    .introduce-text{
+        font-size: 10px ;
+    }
+    .introduce-text-title{
+        font-size: 15px ;
+    }
+    #iTour{
+        padding-bottom: 100px !important;
+    }
+    .parallax-header{
+        transform: translate(-50%,120%);
+    }
+    .parallax-scroll{
+        margin-bottom: 100px;
+    }
+    #team{
+        --spacing: 5px;
+    }
+    .icon-card{
+        height: 35%;
+    }
+    .icon-title{
+        font-size: 12px;
+    }
+    .icon-description{
+        font-size: 10px;
+    }
+    .slick-dots button{
+        width: 10px !important;
+        height: 10px !important;;
+        border-radius: 100rem;
+    }
+}
+@media screen and (max-width: 400px){
+    .introduce-text{
+        font-size: 8px;
+    }
+    .introduce-text-title{
+        font-size: 12px;
+        font-weight: 400 !important;
+        margin-top: 30px !important;
+    }
+    .parallax{
+        height: 250px;
+    }
+    .parallax-scroll{
+        height: 200px;
+    }
+    .parallax-header{
+        transform: translate(-50%,150%);
+        width: 40% !important;
+    }
+    .cloud-left, .cloud-right{
+        top: 30%;
+    }
+    .parallax-title{
+        font-size: 30px;
+    }
+    
+    .parallax-scroll{
+        margin-bottom: 50px;
+    }
+    .icon-card{
+        height: 27%;
+    }
+    .icon-top, .icon-bottom{
+        padding:0px 5px !important;
+    }
+    .profile-title{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 320px){
+    .parallax-scroll{
+        height: 200px;
+    }
+    .parallax-header{
+        transform: translate(-50%,200%);
+    }
+    .icon-card{
+        height: 23%;
+    }
+    .icon-top, .icon-bottom{
+        padding: 5px !important;
+    }
+    .icon-title{
+        font-size: 10px;
+    }
+    .icon-description{
+        font-size: 7px;
+    }
+    .profile-title{
+        margin-top: 50px;
+    }
+}
