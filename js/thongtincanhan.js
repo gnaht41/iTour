@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.querySelectorAll('button[data-change]');
     let inputs = document.querySelectorAll('input[data-change]');
-    let nameReg=/^([A-Z][a-z]+\s)*([A-Z][a-z]+)*$/;
-    let passReg=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W])\S{6,}$/;
-    let sdtReg=/^([0]|[+84])[0-9]{9,11}$/;
+    let nameReg=/^(\p{Lu}\p{L}*\s)*\p{Lu}\p{L}*$/u;
+    let passReg=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])\S{6,}$/;
+    let sdtReg=/^(0(3[2-9]|5[6-9]|7[06-9]|8[0-9]|9[0-9]))[0-9]{7}$/;
     let cccdReg=/^([0-9]{12})|([0-9]{9})$/;
-    let mailReg=/^[A-Za-z0-9]+@[a-z]+\.[a-z]{2,}$/
+    let mailReg=/^[^\s@]+@(?!.*\.\.)[^\s@]+(\.[^\s@.]+)+$/;
     let radio= document.querySelectorAll('input[type="radio"]');
     let save=document.getElementById('save');
     let avt=document.getElementById('img');

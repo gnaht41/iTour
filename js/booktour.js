@@ -54,9 +54,9 @@ gia.value=formatCurrency(parseInt(obj.giaNguoiLon))
 giaLon.placeholder=formatCurrency(parseInt(obj.giaNguoiLon))
 giaTre.placeholder=formatCurrency(parseInt(obj.giaTreEm))
 let check= [0,0,0,0,1,0]
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phoneRegex = /^([0]|\+84)[0-9]{9,11}$/
-const nameReg=/^([A-Z][a-z]+\s)*([A-Z][a-z]+)+$/;
+const emailRegex = /^[^\s@]+@(?!.*\.\.)[^\s@]+(\.[^\s@.]+)+$/;
+const phoneRegex = /^(0(3[2-9]|5[6-9]|7[06-9]|8[0-9]|9[0-9]))[0-9]{7}$/;
+const nameReg = /^(\p{Lu}\p{L}*\s)*\p{Lu}\p{L}*$/u;
 
 nguoiLon.addEventListener('input',function(){
     if(nguoiLon.value>0){
