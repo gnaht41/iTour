@@ -53,6 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
             else if(dataChangeValue=='name'){
                 match=nameReg.test(correspondingInput.value);
             }
+            else if(dataChangeValue=='dob'){
+                let today = new Date();
+                let dd = String(today.getDate()).padStart(2, '0');
+                let mm = String(today.getMonth() + 1).padStart(2, '0');
+                let yyyy = today.getFullYear();
+                let todayStr = yyyy + '-' + mm + '-' + dd;
+                match = (correspondingInput.value != '' && correspondingInput.value < todayStr);
+            }
             else if(dataChangeValue=='dc')
                 match=true;
             let msg=correspondingInput.getAttribute('data-invalid');
