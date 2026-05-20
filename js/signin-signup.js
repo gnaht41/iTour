@@ -16,10 +16,14 @@ let userids = loadFromLocalStorage().map(function(x) {
     return x.id
 })
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const phoneRegex = /^[0-9]{3,10}$/
-const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W])\S{6,}$/;
-const nameReg=/^([A-Z][a-z]+\s)*([A-Z][a-z]+)+$/;
+// Email: có @, domain hợp lệ, không có dấu chấm đôi liên tiếp
+const emailRegex = /^[^\s@]+@(?!.*\.\.)[^\s@]+(\.[^\s@.]+)+$/;
+// SĐT VN: 10 số, bắt đầu bằng 0, đầu số hợp lệ (03x/05x/07x/08x/09x)
+const phoneRegex = /^(0(3[2-9]|5[6-9]|7[06-9]|8[0-9]|9[0-9]))[0-9]{7}$/;
+// Mật khẩu: tối thiểu 6 ký tự, có chữ hoa, chữ thường, số và ký tự đặc biệt
+const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>\/?])\S{6,}$/;
+// Hỗ trợ tên tiếng Việt và Unicode: mỗi từ phải bắt đầu bằng chữ hoa
+const nameReg=/^(\p{Lu}\p{L}*\s)*\p{Lu}\p{L}*$/u;
 inputEmailorPhoneNumber.addEventListener('blur', function(){
     if(emailRegex.test(inputEmailorPhoneNumber.value.trim())||phoneRegex.test(inputEmailorPhoneNumber.value.trim())){
         if(!userids.includes(inputEmailorPhoneNumber.value.trim())) {
