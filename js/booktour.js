@@ -73,12 +73,17 @@ treEm.addEventListener('input',function(){
     gia.value=gia.value=formatCurrency(tongtien)
     }
 })
-ngaykh.addEventListener('blur',function(){
+ngaykh.addEventListener('change',function(){
+    // Lấy ngày hiện tại dạng YYYY-MM-DD
     let today = new Date();
-    today.setHours(0, 0, 0, 0); // Xóa phần giờ phút giây để chỉ so sánh ngày
-    let ngaykhvalue = new Date(ngaykh.value);
-    console.log(ngaykhvalue)
-    if(today.getTime() <= ngaykhvalue.getTime()){ // Cho phép chọn ngày hôm nay (<=)
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let yyyy = today.getFullYear();
+    let todayStr = yyyy + '-' + mm + '-' + dd;
+    
+    let ngaykhvalueStr = ngaykh.value; // Giá trị trả về luôn là YYYY-MM-DD
+    
+    if(ngaykhvalueStr >= todayStr){
         ngaykh.nextElementSibling.innerHTML=''
         ngaykh.classList.remove('is-invalid')
         check[5]=1
