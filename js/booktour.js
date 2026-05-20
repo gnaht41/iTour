@@ -75,9 +75,10 @@ treEm.addEventListener('input',function(){
 })
 ngaykh.addEventListener('blur',function(){
     let today = new Date();
+    today.setHours(0, 0, 0, 0); // Xóa phần giờ phút giây để chỉ so sánh ngày
     let ngaykhvalue = new Date(ngaykh.value);
     console.log(ngaykhvalue)
-    if(today.getTime() < ngaykhvalue.getTime()){
+    if(today.getTime() <= ngaykhvalue.getTime()){ // Cho phép chọn ngày hôm nay (<=)
         ngaykh.nextElementSibling.innerHTML=''
         ngaykh.classList.remove('is-invalid')
         check[5]=1
